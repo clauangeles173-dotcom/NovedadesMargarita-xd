@@ -14,7 +14,7 @@ public class Entrega extends RegistroPedido {
 
    
     public Entrega(String codigoPedido, String fechaEntrega) {
-
+        super(codigoPedido); 
         if (fechaEntrega == null || fechaEntrega.trim().isEmpty()) {
             throw new IllegalArgumentException(
                     "La fecha de entrega es obligatoria.");
