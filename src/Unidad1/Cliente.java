@@ -41,5 +41,8 @@ public class Cliente extends Persona {
             pedidos.add(pedido);
         }
     }
+    public List<Pedido> getPedidos() {
+        return Collections.unmodifiableList(new ArrayList<>(pedidos));
+    }
 
 }
