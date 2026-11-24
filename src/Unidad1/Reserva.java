@@ -27,9 +27,7 @@ public class Reserva {
 
     
 
-    public String getCodigoPedido() {
-        return codigoPedido;
-    }
+    
 
     public String getEstado() {
         return estado;
