@@ -16,6 +16,7 @@ public class Cliente extends Persona {
     private final String codigoCliente;    
     // Secuencia compartida. No identifica por sí mismo a una persona.
     private static int contadorClientes = 0;
+    private final List<Pedido> pedidos = new ArrayList<>();
     
     // METODOS
 
@@ -27,8 +28,6 @@ public class Cliente extends Persona {
         // Se forma un código siguiendo el formato CLI-XXXX. Por ejemplo, el primer cliente recibirá el codigo CLI-0001.
         // Si llegase a superar los 9999 clientes, el formato simplemente se expande a CLI-XXXXX.
         this.codigoCliente = String.format("CLI-%04d", contadorClientes);
-        this.nombres = nombres.trim();
-        this.telefono = telefono.trim();
     }
     
     // Getter para codigoCliente. Devuelve el código del cliente sin modificarlo.
