@@ -36,24 +36,10 @@ public class Cliente extends Persona {
         return codigoCliente;
     }
      
-    // Setter para nombres. Valida el nuevo nombre.
-    // Si es válido, reemplaza el anterior; si es inválido, conserva el dato anterior.
-    public void setNombre(String nombre) {
-        if (nombres == null || nombres.trim().isEmpty()) {
-            throw new IllegalArgumentException("El nombre es obligatorio.");
+    void agregarPedido(Pedido pedido) {
+        if (pedido != null && !pedidos.contains(pedido)) {
+            pedidos.add(pedido);
         }
-        
-        this.nombres = nombres.trim();
-    }
-    
-    // Setter para telefono. Valida el nuevo teléfono.
-    // Si es válido, lo actualiza; si es inválido, conserva el dato anterior.
-    public void setTelefono(String telefono) {
-        if (telefono == null || telefono.trim().isEmpty()) {
-            throw new IllegalArgumentException("El telefono es obligatorio.");
-        }
-        
-        this.telefono = telefono.trim();
     }
 
 }
