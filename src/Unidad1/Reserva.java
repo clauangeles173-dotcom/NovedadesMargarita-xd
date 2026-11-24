@@ -53,5 +53,8 @@ public class Reserva extends RegistroPedido {
 
         this.estado = "COMPLETADA";
         return true;
-    } 
-}
+    }
+        @Override
+    public String toString() {
+        return "Reserva[" + super.toString() + ", estado " + estado + "]";
+    }
