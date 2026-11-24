@@ -9,17 +9,11 @@ package Unidad1;
  * @author fcag2
  */
 public class Reserva {
-   
-
-
+  
     private String estado = "PENDIENTE";
 
-    
-
     public Reserva(String codigoPedido) {
-        if (codigoPedido == null || codigoPedido.trim().isEmpty()) {
-            throw new IllegalArgumentException(
-                    "El codigo del pedido es obligatorio.");
+
         }
 
         this.codigoPedido = codigoPedido.trim();
