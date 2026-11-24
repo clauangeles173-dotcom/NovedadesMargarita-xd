@@ -44,5 +44,9 @@ public class Cliente extends Persona {
     public List<Pedido> getPedidos() {
         return Collections.unmodifiableList(new ArrayList<>(pedidos));
     }
+        @Override
+    public String toString() {
+        return codigoCliente + " - " + super.toString();
+    }
 
 }
