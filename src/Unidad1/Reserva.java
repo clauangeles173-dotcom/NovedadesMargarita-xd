@@ -24,18 +24,14 @@ public class Reserva {
 
         this.codigoPedido = codigoPedido.trim();
     }
-
-    
-
-    
+    public String getCodigoPedido() {
+        return codigoPedido;
+    }
 
     public String getEstado() {
         return estado;
     }
 
-   
-
-    
     public boolean activar() {
         if (!"PENDIENTE".equals(estado)) {
             return false;
