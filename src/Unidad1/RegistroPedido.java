@@ -15,3 +15,12 @@ public class RegistroPedido {
         }
         this.codigoPedido = codigoPedido.trim();
     }
+    public String getCodigoPedido() {
+        return codigoPedido;
+    }
+
+    @Override
+    public String toString() {
+        return "pedido " + codigoPedido;
+    }
+}
