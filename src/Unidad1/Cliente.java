@@ -18,6 +18,7 @@ public class Cliente extends Persona {
 
     // Constructor. Inicializa un cliente válido y genera su código.
     public Cliente(String nombres, String telefono) {
+        super(nombres, telefono);
         contadorClientes++;
         
         // Se forma un código siguiendo el formato CLI-XXXX. Por ejemplo, el primer cliente recibirá el codigo CLI-0001.
