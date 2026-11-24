@@ -26,3 +26,22 @@ public class Persona {
     public String getTelefono() {
         return telefono;
     }
+    public void setNombre(String nombre) {
+        if (nombre == null || nombre.trim().isEmpty()) {
+            throw new IllegalArgumentException("El nombre es obligatorio.");
+        }
+        this.nombres = nombre.trim();
+    }
+
+    public void setTelefono(String telefono) {
+        if (telefono == null || telefono.trim().isEmpty()) {
+            throw new IllegalArgumentException("El telefono es obligatorio.");
+        }
+        this.telefono = telefono.trim();
+    }
+
+    @Override
+    public String toString() {
+        return nombres + " (" + telefono + ")";
+    }
+}
