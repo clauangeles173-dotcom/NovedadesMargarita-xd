@@ -5,6 +5,6 @@ package Unidad1;
  *
  * @author CLAUDIA
  */
-public class ProductoAccesorio {
+public class ProductoAccesorio extends Producto{
     
 }
