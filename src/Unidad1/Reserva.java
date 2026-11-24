@@ -8,7 +8,7 @@ package Unidad1;
  *
  * @author fcag2
  */
-public class Reserva {
+public class Reserva extends RegistroPedido {
   
     private String estado = "PENDIENTE";
 
