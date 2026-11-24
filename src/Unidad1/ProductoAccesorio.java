@@ -16,3 +16,15 @@ public class ProductoAccesorio extends Producto{
     public String getMaterial() {
         return material;
     }
+    public final void setMaterial(String material) {
+        if (material == null || material.trim().isEmpty()) {
+            throw new IllegalArgumentException("El material es obligatorio.");
+        }
+        this.material = material.trim();
+    }
+
+    @Override
+    public String describir() {
+        return super.describir() + " | Material " + material;
+    }
+}
