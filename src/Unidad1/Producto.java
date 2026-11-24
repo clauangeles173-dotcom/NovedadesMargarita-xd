@@ -99,4 +99,7 @@ public class Producto {
         
         this.precio = precio;
     }
+        public String describir() {
+        return codigoProducto + " | " + nombre + " | S/ " + String.format("%.2f", precio);
+    }
 }
