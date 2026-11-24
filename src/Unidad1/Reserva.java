@@ -16,12 +16,6 @@ public class Reserva extends RegistroPedido {
         super(codigoPedido);
         }
 
-        this.codigoPedido = codigoPedido.trim();
-    }
-    public String getCodigoPedido() {
-        return codigoPedido;
-    }
-
     public String getEstado() {
         return estado;
     }
@@ -58,3 +52,4 @@ public class Reserva extends RegistroPedido {
     public String toString() {
         return "Reserva[" + super.toString() + ", estado " + estado + "]";
     }
+   }
