@@ -19,3 +19,10 @@ public class Persona {
         this.nombres = nombres.trim();
         this.telefono = telefono.trim();
     }
+       public String getNombre() {
+        return nombres;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
