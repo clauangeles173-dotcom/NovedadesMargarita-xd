@@ -26,4 +26,8 @@ public class Entrega extends RegistroPedido {
     public String getFechaEntrega() {
         return fechaEntrega;
     }
+     @Override
+    public String toString() {
+        return "Entrega[" + super.toString() + ", fecha " + fechaEntrega + "]";
+    }
 }
