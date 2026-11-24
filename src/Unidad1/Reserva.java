@@ -13,7 +13,7 @@ public class Reserva extends RegistroPedido {
     private String estado = "PENDIENTE";
 
     public Reserva(String codigoPedido) {
-
+        super(codigoPedido);
         }
 
         this.codigoPedido = codigoPedido.trim();
