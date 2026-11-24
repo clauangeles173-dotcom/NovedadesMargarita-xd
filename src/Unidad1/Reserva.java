@@ -11,7 +11,7 @@ package Unidad1;
 public class Reserva {
    
 
-    private final String codigoPedido;
+
     private String estado = "PENDIENTE";
 
     
