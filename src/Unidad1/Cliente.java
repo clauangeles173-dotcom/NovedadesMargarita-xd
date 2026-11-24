@@ -4,6 +4,9 @@ package Unidad1;
 
 // Esta clase se encarga de registrar la identificación y contacto del solicitante.
 // Los productos solicitados, cantidades y estados se registran en 'Pedido' y sus detalles.
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Cliente extends Persona {
 
