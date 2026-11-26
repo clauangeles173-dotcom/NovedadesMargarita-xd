@@ -45,7 +45,7 @@ public class Pedido {
         this.cliente = cliente;
         cliente.agregarPedido(this);  // el cliente tambien conoce a su pedido
     }
-    private static String codigoDe(Cliente cliente) {
+       private static String codigoDe(Cliente cliente) {
         if (cliente == null) {
             throw new IllegalArgumentException("El cliente es obligatorio.");
         }
@@ -63,7 +63,26 @@ public class Pedido {
         return estado;
     }
 
-    
+        public Cliente getCliente() {
+        return cliente;
+    }
+
+    public boolean agregarDetalle(String codigoProducto, int cantidad,
+                                  double precioUnitario) {
+        if (!"BORRADOR".equals(estado)) {
+            return false;
+        }
+        detalles.add(new DetallePedido(codigoProducto, cantidad, precioUnitario));
+        return true;
+    }
+
+    public boolean agregarDetalle(Producto producto, int cantidad) {
+        if (producto == null) {
+            throw new IllegalArgumentException("El producto es obligatorio.");
+        }
+        return agregarDetalle(producto.getCodigoProducto(), cantidad,
+                              producto.getPrecio());
+    }
     public boolean cancelar() {
         if (!"BORRADOR".equals(estado)) {
             return false;
