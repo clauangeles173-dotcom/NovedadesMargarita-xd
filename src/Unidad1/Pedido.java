@@ -45,6 +45,12 @@ public class Pedido {
         this.cliente = cliente;
         cliente.agregarPedido(this);  // el cliente tambien conoce a su pedido
     }
+    private static String codigoDe(Cliente cliente) {
+        if (cliente == null) {
+            throw new IllegalArgumentException("El cliente es obligatorio.");
+        }
+        return cliente.getCodigoCliente();
+    }
     public String getCodigoPedido() {
         return codigoPedido;
     }
