@@ -56,4 +56,19 @@ public class Catalogo {
             this.descripcion = descripcion.trim();
         }
     } 
+    public boolean agregarProducto(Producto producto) {
+        if (producto == null || productos.contains(producto)) {
+            return false;
+        }
+        productos.add(producto);
+        return true;
+    }
+
+    public boolean quitarProducto(Producto producto) {
+        return productos.remove(producto);
+    }
+
+    public List<Producto> getProductos() {
+        return Collections.unmodifiableList(new ArrayList<>(productos));
+    }
 }
