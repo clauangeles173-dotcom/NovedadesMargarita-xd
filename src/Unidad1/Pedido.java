@@ -83,6 +83,17 @@ public class Pedido {
         return agregarDetalle(producto.getCodigoProducto(), cantidad,
                               producto.getPrecio());
     }
+    public List<DetallePedido> getDetalles() {
+        return Collections.unmodifiableList(new ArrayList<>(detalles));
+    }
+
+    public double calcularTotal() {
+        double total = 0;
+        for (DetallePedido d : detalles) {
+            total += d.getSubtotal();
+        }
+        return total;
+    }
     public boolean cancelar() {
         if (!"BORRADOR".equals(estado)) {
             return false;
