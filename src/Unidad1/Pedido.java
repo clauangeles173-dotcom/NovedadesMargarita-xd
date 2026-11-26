@@ -8,8 +8,6 @@ import java.util.ArrayList;
 
 public class Pedido {
   
-
-    
     private final String codigoPedido;
 
     
@@ -42,8 +40,11 @@ public class Pedido {
         this.codigoCliente = codigoCliente.trim();
     }
 
-   
-
+    public Pedido(Cliente cliente) {
+        this(codigoDe(cliente));      // reutiliza el constructor original
+        this.cliente = cliente;
+        cliente.agregarPedido(this);  // el cliente tambien conoce a su pedido
+    }
     public String getCodigoPedido() {
         return codigoPedido;
     }
