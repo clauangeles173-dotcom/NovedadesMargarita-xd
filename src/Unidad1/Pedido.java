@@ -22,7 +22,10 @@ public class Pedido {
     private String estado = "BORRADOR";
 
     
+    private Cliente cliente;
 
+    private final List<DetallePedido> detalles = new ArrayList<>();
+    
     public Pedido(String codigoCliente) {
        
         if (codigoCliente == null || codigoCliente.trim().isEmpty()) {
